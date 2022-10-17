@@ -54,7 +54,7 @@ yarn add
 > This package also depends on `react`. Please make sure you have it installed
 > as well. 👍
 
-### Usage
+## Usage
 
 Upon running the project, you can spin up the server by running the following code:
 
@@ -65,9 +65,14 @@ or using `Yarn`
 ```
 yarn start  
 ```
-> This package also depends on `react`. Please make sure you have it installed
-> as well. 👍
- 
+
+### UI Interaction
+
+Upon running the project, you will first be greeted with the login page, according to the UI design. 
+
+ > The form will not be submitted till you input some data. This is only to demonstrate form validation on the page. The details put in, don't matter. 
+
+  > On the dashboard page, we click the three dots on the users item to open the details modal, as per the UI design. We also click the table header to open the filter dropdown.
 
 ## Testing
 
@@ -152,6 +157,6 @@ You can check out the live project at [live-demo]
 [prs-badge]:
   https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]:  https://github.com/George5555ish/lendsqr-fe-test
- [live-demo]:   https://github.com/George5555ish/lendsqr-fe-test
+ [live-demo]:  https://mbajiaku-george-lendsqr-fe-test.netlify.app/
  
   
