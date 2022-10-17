@@ -52,6 +52,39 @@ function UsersTable() {
   const [showFilterDrodown, setShowFilterDropdown] = React.useState(false);
   const [currentListItemId, setCurrentListItemId] = React.useState(0);
   const [currentListId, setCurrentListId] = React.useState('1');
+
+  const blacklistUser = (userId: string) => {
+   const newUserslist: ModifiedGetAllUsersApiInterface[] = totalUsersList.map((listItem) => {
+      if (listItem.id === userId){
+        return {
+          ...listItem,
+          status: 'blacklisted'
+        }
+      } else {
+        return listItem
+      }
+   });
+
+   setTotalUsersList(newUserslist)
+   setShowDetailsDropdown(false);
+  }
+
+  
+  const activateUser = (userId: string) => {
+   const newUserslist: ModifiedGetAllUsersApiInterface[] = totalUsersList.map((listItem) => {
+      if (listItem.id === userId){
+        return {
+          ...listItem,
+          status: 'active'
+        }
+      } else {
+        return listItem
+      }
+   });
+
+   setTotalUsersList(newUserslist)
+   setShowDetailsDropdown(false);
+  }
   React.useEffect(() => {
     fetch(endpoints.GET_ALL_USERS, { method: "GET" })
       .then((response) => response.json())
@@ -126,6 +159,8 @@ function UsersTable() {
           setShowDetailsDropdown={setShowDetailsDropdown}
           currentListItemId={currentListItemId}
           currentListId={currentListId}
+          blacklistuser={blacklistUser}
+          activateUser={activateUser}
         />
       )}
       {showFilterDrodown && (

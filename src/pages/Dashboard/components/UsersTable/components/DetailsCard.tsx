@@ -4,10 +4,12 @@ import blacklistIcon from "../../../../../assets/icons/dropdown/blacklist-icon.s
 import activateIcon from "../../../../../assets/icons/dropdown/activate-icon.svg";
 
 import {useNavigate} from "react-router-dom"
-function DetailsCard({setShowDetailsDropdown,currentListItemId,currentListId}: {
+function DetailsCard({setShowDetailsDropdown,currentListItemId,currentListId,blacklistuser,activateUser}: {
     setShowDetailsDropdown: React.Dispatch<React.SetStateAction<boolean>>,
     currentListItemId: number,
     currentListId: string;
+    blacklistuser: (currentListId: string) => void;
+    activateUser: (currentListId: string) => void;
 }) {
 
 
@@ -50,7 +52,7 @@ function DetailsCard({setShowDetailsDropdown,currentListItemId,currentListId}: {
           View Details
         </p>
       </div>
-      <div className="flex_main flex_align_center details_card_item">
+      <div className="flex_main flex_align_center details_card_item" onClick={()=> blacklistuser(currentListId)}>
         <div className="dropdown_img_container flex_main flex_align_center">
           <img src={blacklistIcon} alt="icon" className="dropdown_img" />
         </div>
@@ -58,7 +60,7 @@ function DetailsCard({setShowDetailsDropdown,currentListItemId,currentListId}: {
           Blacklist User
         </p>
       </div>
-      <div className="flex_main flex_align_center details_card_item">
+      <div className="flex_main flex_align_center details_card_item" onClick={()=> activateUser(currentListId)}>
         <div className="dropdown_img_container flex_main flex_align_center">
           <img src={activateIcon} alt="icon" className="dropdown_img" />
         </div>
