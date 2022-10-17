@@ -1,46 +1,157 @@
-# Getting Started with Create React App
+<h1 align="center">
+ <br>
+  <img src="./src/assets/logo.svg" alt="lendsqr logo" title="lendsqr logo" width="300">
+  <br>
+  Lendsqr Frontend Engineer Assessment
+ 
+</h1>
+<p align="center" style="font-size: 1.2rem;">A Dashboard Frontend with REST API and indexedDB.</p>
+ 
+<hr />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Build Status][build-badge]][build] 
+  [![version][version-badge]][package]
+[![MIT License][license-badge]][license]
 
-## Available Scripts
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
+[![PRs Welcome][prs-badge]][prs]  
+ 
+ 
 
-In the project directory, you can run:
+## Frontend Assessment
 
-### `yarn start`
+Build out a Frontend with React and SCSS, with indexedDB/LocalStorage to persist user data, as well as a mock API to get all users.
+  
+### Solution
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Please follow the table of contents below as a guide through the application.
+  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Table of Contents
+ 
 
-### `yarn test`
+- [Installation](#installation)
+- [Usage](#usage) 
+- [Example](#example) 
+- [Contributors](#contributors)
+- [LICENSE](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-### `yarn build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is distributed via [npm][npm] which is bundled with [node][node] and
+should have all `dependencies` installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install  
+```
+or using `Yarn`
+```
+yarn add  
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> This package also depends on `react`. Please make sure you have it installed
+> as well. 👍
 
-### `yarn eject`
+### Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Upon running the project, you can spin up the server by running the following code:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm start  
+```
+or using `Yarn`
+```
+yarn start  
+```
+> This package also depends on `react`. Please make sure you have it installed
+> as well. 👍
+ 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Testing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To start the test cases, simply run the test script below:
 
-## Learn More
+```
+npm run test 
+```
+> [Ensure to use in a separate terminal] 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Example
+ 
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import Input from "../index";
+import {render, cleanup,screen } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect"
+
+afterEach(cleanup)
+it("renders input without crashing", () => {
+  const div = document.createElement("div");
+
+  ReactDOM.render(
+    <Input
+    placeholder={"Test"}
+    required 
+    inputType={"text"}
+  ></Input>,div
+  );  
+});
+
+it("renders input correctly", () => {
+    render( <Input
+      placeholder={"Test"}
+      required 
+      inputType={"text"}
+  />)
+  expect( screen.getByTestId('input-component')).toHaveClass("input_container")
+     
+  });
+```
+ 
+   
+ 
+### Test Case
+
+ The Tests are set up to have the positive cases active.
+ To check on negative test cases, you will see the commented code in each test file. You can comment out the positive test code and uncomment the negative test case, then save to restart the test server
+  
+
+## Contributors
+
+No Current Contributors:
+ 
+Contributions of any kind are welcome!
+
+## LICENSE
+
+MIT
+
+### DEMO
+
+You can check out the live project at [live-demo]
+
+[npm]: https://www.npmjs.com/
+[node]: https://nodejs.org
+[build-badge]:
+  https://img.shields.io/github/workflow/status/downshift-js/downshift/validate?logo=github&style=flat-square
+[build]:
+  https://github.com/George5555ish/lendsqr-fe-test
+[coverage-badge]:
+  https://img.shields.io/codecov/c/github/downshift-js/downshift.svg?style=flat-square
+ 
+[version-badge]: https://img.shields.io/npm/v/downshift.svg?style=flat-square
+[package]: https://www.npmjs.com
+ 
+[npmcharts]: http://npmcharts.com/compare/downshift
+[license-badge]: https://img.shields.io/npm/l/downshift.svg?style=flat-square
+[license]: https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt
+[prs-badge]:
+  https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[prs]:  https://github.com/George5555ish/lendsqr-fe-test
+ [live-demo]:   https://github.com/George5555ish/lendsqr-fe-test
+ 
+  
