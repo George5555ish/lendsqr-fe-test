@@ -20,7 +20,7 @@ function Input({
     inputStyle
 }:InputPropsInterface) {
   return (
-    <div className='input_container' style={containerStyles}>
+    <div data-testid="input-component" className='input_container' style={containerStyles}>
         <input type={showPassword !== undefined ? (showPassword ? 'text': 'password'): inputType}  placeholder={placeholder} autoComplete={'off'} required={required} style={inputStyle}/>
         {child}
     </div>

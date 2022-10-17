@@ -13,7 +13,7 @@ function TopBar() {
 
   const [animateHamburger, setAnimateHamburger] = React.useState(false)
   return (
-    <div className="topBarContainer flex_between">
+    <div className="topBarContainer flex_between" data-testid="top-bar-component-test">
       <div className="imageSection">
         <div className="" onClick={() => navigate("/")}>
           <img src={logo} alt="logo" />

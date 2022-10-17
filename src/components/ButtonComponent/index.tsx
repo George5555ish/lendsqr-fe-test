@@ -11,7 +11,7 @@ function Button({
     type
 }:ButtonPropsInterface) {
   return (
-    <button type={type} className='btn_container heading_font_family text_neutral_600 fw_600 fs_12 | toggle_btn'>{buttonText}</button>
+    <button data-testid="button-component" type={type} className='btn_container heading_font_family text_neutral_600 fw_600 fs_12 | toggle_btn'>{buttonText}</button>
   )
 }
 

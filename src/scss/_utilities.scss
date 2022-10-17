@@ -128,11 +128,17 @@
 
 .fw_600 {
   font-weight: bold;
+  @media screen and (max-width: $break_point_desktop) {
+    font-size: 14px;
+  }
 }
 
 .fw_400 {
   font-weight: 400;
   font-style: normal;
+  @media screen and (max-width: $break_point_desktop) {
+    font-size: 12px;
+  }
 }
 .ff_work_sans{
   font-family: 'Work Sans';

@@ -8,7 +8,10 @@ import ErrorPage from "./pages/ErrorPage";
 import SingleUserPage from "./pages/Dashboard/SingleUserPage";
 import UsersPage from "./pages/Dashboard/Users";
 import Dexie from 'dexie'
+import { DBConfig } from './config';
+import { initDB } from 'react-indexed-db';
  
+initDB(DBConfig);
  
 function App() {
    

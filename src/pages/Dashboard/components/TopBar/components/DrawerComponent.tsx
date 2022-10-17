@@ -20,7 +20,7 @@ function DrawerComponent({ animateHamburger }: { animateHamburger: boolean }) {
   }
   return (
     <nav id="nav" className={animateHamburger ? "show" : ""}>
-      <ul>
+      <ul  data-testid="drawer-component" className="show">
         <li>
           <div className="flex_main flex_between">
             <div className="profile_pic_container">
