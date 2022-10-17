@@ -1,0 +1,201 @@
+.single_user_page {
+
+    margin-top: 65px;
+    padding: 0 60px;
+
+    .backDiv {
+        max-width: 160px;
+        cursor: pointer;
+        transition: 0.45s ease;
+
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+
+    .user_details_heading {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin-top: 32px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $break_point_desktop) {
+            flex-direction: column;
+
+        }
+    }
+
+    .blacklist_buttons {
+        max-width: 700px;
+
+        @media screen and (max-width: $break_point_desktop) {
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .blacklist {
+            border: 1px solid $clr-neutral-200;
+            border-radius: 8px;
+            width: 170px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            margin-right: 20px;
+            cursor: pointer;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .activate {
+            border: 1px solid $clr-neutral-600;
+            border-radius: 8px;
+            width: 170px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .profile_card_container {
+        padding: 30px;
+        padding-bottom: 0;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+
+        .top_profile_info {
+            @media screen and (max-width: $break_point_desktop) {
+                flex-direction: column;
+                align-items: center;
+             
+              }
+        }
+
+        .user_detail_name {
+            margin: 0 20px;
+        }
+
+        .avatar_container {
+            background: rgba(33, 63, 125, .16);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .user_tier_div {
+            border-left: 1px solid rgba(84, 95, 125, .2);
+            border-right: 1px solid rgba(84, 95, 125, .2);
+            padding: 0 30px;
+            padding-top: 7px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media screen and (max-width: $break_point_desktop) {
+          
+                border-left:0;
+                border-right:0;
+              }
+            .stars_container {
+                margin-top: 5.5px;
+            }
+        }
+
+        .account_div {
+            padding: 0 33px;
+            padding-bottom: 3px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            strong {
+                text-decoration: line-through;
+            }
+        }
+
+        .tab_controls {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+
+            margin-top: 50px;
+            @media screen and (max-width: $break_point_desktop) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+             
+              }
+            p {
+                text-align: center;
+                padding-bottom: 5px;
+                cursor: pointer;
+                  @media screen and (max-width: $break_point_desktop) {
+               margin: .9rem 0;
+             
+              }
+            }
+
+            p.active {
+                border-bottom: 1px solid $clr-neutral-600;
+                font-family: 'Work Sans';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: $clr-neutral-600
+            }
+        }
+    }
+
+    .profile_details_container {
+        padding: 0 30px;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        background-color: #fff;
+        padding-bottom: 80px;
+        margin-top: 30px;
+        margin-bottom: 80px;
+
+        .personal_info_container {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 0;
+        }
+
+        .education_info_container {}
+
+        .personalInfoDiv {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(33, 63, 125, .1);
+            @media screen and (max-width: $break_point_desktop) {
+                display: flex;  
+                flex-wrap: wrap;
+              }
+        }
+
+        .education_info_container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .personalInfoText {
+            text-transform: uppercase;
+        }
+    }
+}

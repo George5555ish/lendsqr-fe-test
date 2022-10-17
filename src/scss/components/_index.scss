@@ -1,0 +1,216 @@
+// INPUT COMPONENT
+.input_container{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    max-width: 447px;
+    height: 50px;
+    padding: 12.5px 16px;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    border-radius: 5px;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: none;
+    input {
+        border: none;
+        outline: none;
+        background: none;
+        width: 100%;
+        &:focus{
+            background: none;
+        }
+    }   
+}
+
+
+// SEARCH ICON COMPONENT
+.searchIconContainer{
+    background-color: $clr-neutral-600;
+    border: 2px solid $clr-neutral-600;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+
+
+// BUTTON COMPONENT
+.btn_container{
+    color:#FFFFFF;
+    width: 100%;
+    max-width: 447px;
+    padding: 15px;
+    background:  $clr-neutral-600;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+//  HAMBURGER STYLES
+header {
+    width: 100%;
+    height: 100%;
+    background: #e74c3c;
+    position: absolute;
+    overflow: auto;
+  }
+  
+  .icon-1, .icon-2, .icon-3 {
+      position: absolute;
+      left: 25%;
+      top: 50%;
+      width: 32px;
+      height: 3px;
+      background-color:  $clr-neutral-600;
+      transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
+  }
+  
+  .icon-1 {
+    transform: translateY(-8px);
+    animation-delay: 100ms;
+  }
+  
+  .icon-3 {
+    transform: translateY(8px);
+    animation-delay: 250ms;
+  }
+  
+  .hamburger-icon {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    // top: 10%;
+    right: 3%;
+    z-index: 9998 !important;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    background: rgba(255,255,255,0.2);
+    display: none;
+    @media screen and (max-width: $break_point_desktop) {
+        display: block;
+     }   
+    &:hover { 
+      transform: scale(1.2);
+      box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+    }
+  }
+  
+  .icon-1.a {
+    transform: rotate(40deg);
+  }
+  .icon-3.b {
+    transform: rotate(-40deg);
+  }
+  .icon-2.c {
+    opacity: 0;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      width: 0%;
+      // transform: scale(.3);
+      opacity: 0;
+    }
+    
+    100% {
+      width: 50%;
+      // transform:scale(1);
+      opacity: 1;
+    }
+  }
+  
+  nav {
+    background: $clr-primary-400;
+    position: absolute;
+    isolation: isolate;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0%;
+    z-index: 9997 !important;
+    opacity: 0;
+   
+      transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
+     transition-delay: 100ms;
+    ul {
+      margin: 0;
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      li {
+        list-style: none;
+        font-size: 24px;
+        color: #fff;
+        line-height: 2.2;
+        text-transform: uppercase;
+        letter-spacing: 1.7px;
+        
+        &:before {
+          
+        }
+      }
+    }
+  }
+  
+   nav.show {
+    //  opacity: 0;
+    // animation: slideIn 0.6s cubic-bezier(.62,.04,.3,1.56);
+    // animation-fill-mode: forwards;
+     width: 50%;
+      // transform:scale(1);
+     opacity: 1;
+  }
+  
+  
+  .dark-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #64B5F6;
+    height: 100%;
+    width: 0%;
+    transition: all 500ms cubic-bezier(.62,.04,.3,1.8);
+    transition-delay: 50ms;
+    z-index: 5;
+    opacity: 1;
+  }
+  
+  .dark-blue.slide {
+    width: 50%;
+    opacity: 1;
+  }
+  
+  @keyframes shotup {
+    0% {
+      transform: translateY(300%) ;
+      opacity: 0;
+    }
+    90% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0%) ;
+      opacity: 1;
+    }
+  }
+   

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap');
+@import "../scss/_variables";
+@import "../scss/_utilities";
+@import "../scss/_mixins";
+@import "../scss/_breakpoints";
+@import "../scss/components/_index";
+
+@import "../scss/LoginPage/_index";
+@import "../scss/Dashboard/_index";
+@import "../scss/Dashboard/SingleUserPage/_index";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ 
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+ 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+.default_img {
+  max-width: 100%;
+  display: block;
+}
+.default_img {
+  width: 100%;
+}
+@font-face {
+  font-family: 'AvenirNextBold';  
+  src: url('../assets/fonts/AvenirNextLTPro-Bold.otf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'AvenirNextRegular';  
+  src: url('../assets/fonts/AvenirNextLTPro-Regular.otf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'SFCompactText';  
+  src: url('../assets/fonts/SFCompactText-Regular.ttf'); /*URL to font*/
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  } 
+}
+
